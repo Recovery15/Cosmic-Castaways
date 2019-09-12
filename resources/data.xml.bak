@@ -27,7 +27,7 @@
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="-1" fixedrot="true" fric="0.2" gid="4" id="5" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Alien Grabber" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="6" static="false">
+    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="13" fixedrot="true" fric="0.2" gid="4" id="5" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Alien Grabber" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="6" static="false">
         <snippets>
             <s enabled="true" id="0">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -73,13 +73,13 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="4" name="Alien Saucer" readable="false" shared="false">
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="128" id="0" loop="true" name="Animation 0" numframes="6" originx="32" originy="32" sync="false" version="2" width="192">
-            <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
+            <poly data="4,0,0,96,0,96,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="6" name="Alien Triangle" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="1" width="64">
-            <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
+            <poly data="4,0,0,96,0,96,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="18" name="Desert Background" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
@@ -89,7 +89,7 @@
     </tileset>
     <music atlasID="0" desc="" id="15" loop="true" name="Explode" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="16" loop="true" name="Fire" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
-    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="-1" fixedrot="false" fric="0.2" gid="3" id="11" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Particle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="12" static="false">
+    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="17" fixedrot="false" fric="0.2" gid="3" id="11" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Particle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="12" static="false">
         <snippets>
             <s enabled="true" id="8">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -97,7 +97,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="12" name="Particle" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="5" id="0" loop="true" name="Animation 0" numframes="1" originx="3" originy="2" sync="false" version="1" width="6"/>
+        <anim across="0" down="0" durations="100" height="1" id="0" loop="true" name="Animation 0" numframes="1" originx="3" originy="2" sync="false" version="2" width="1"/>
     </sprite>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="-1" fixedrot="true" fric="0.2" gid="3" id="13" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Particle Bigger" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="14" static="false">
         <snippets>
@@ -117,11 +117,11 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="10" name="Player Projectile" readable="false" shared="false">
-        <anim across="2" down="1" durations="70,70" height="23" id="0" loop="true" name="Animation 0" numframes="2" originx="8" originy="11" sync="false" version="1" width="34">
-            <poly data="4,0,0,17,0,17,23,0,23" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="true"/>
+        <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="Animation 0" numframes="1" originx="12" originy="17" sync="false" version="2" width="25">
+            <poly data="4,0,0,25,0,25,34,0,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="-1" fixedrot="true" fric="0.2" gid="3" id="1" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Player Tank" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="2" static="false">
+    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="14" fixedrot="true" fric="0.2" gid="3" id="1" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Player Tank" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="2" static="false">
         <snippets>
             <s enabled="true" id="5">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -136,7 +136,7 @@
                 <prop id="4" list="0" val="9"/>
                 <prop id="5" list="0" val="90"/>
                 <prop id="6" list="0" val="90"/>
-                <prop id="7" list="0" val="16"/>
+                <prop id="7" list="0" val="No Sound"/>
                 <prop id="8" list="0" val="true"/>
                 <prop id="9" list="0" val=""/>
                 <prop id="10" list="0" val="false"/>
@@ -159,7 +159,49 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="2" name="Player Tank" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="1" width="64">
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
+            <poly data="4,0,0,96,0,96,96,0,96" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="16" fixedrot="true" fric="0.2" gid="3" id="19" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Space Person 2" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="20" static="false">
+        <snippets>
+            <s enabled="true" id="5">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="fire"/>
+                <prop id="2" list="0" val="space"/>
+            </s>
+            <s enabled="true" id="7">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="fire"/>
+                <prop id="2" list="0" val="22"/>
+                <prop id="3" list="0" val=""/>
+                <prop id="4" list="0" val="9"/>
+                <prop id="5" list="0" val="90"/>
+                <prop id="6" list="0" val="90"/>
+                <prop id="7" list="0" val="-1"/>
+                <prop id="8" list="0" val="true"/>
+                <prop id="9" list="0" val=""/>
+                <prop id="10" list="0" val="false"/>
+                <prop id="11" list="0" val="-6"/>
+                <prop id="12" list="0" val="0"/>
+            </s>
+            <s enabled="true" id="9">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="18" list="0" val="false"/>
+                <prop id="19" list="0" val="false"/>
+                <prop id="7" list="0" val="left"/>
+                <prop id="8" list="0" val="right"/>
+                <prop id="9" list="0" val="3"/>
+                <prop id="11" list="0" val="8"/>
+                <prop id="12" list="0" val="0"/>
+            </s>
+            <s enabled="true" id="10">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="20" name="Space Person 2" readable="false" shared="false">
+        <anim across="1" down="1" durations="100" height="96" id="0" loop="true" name="Animation 0" numframes="1" originx="48" originy="48" sync="false" version="2" width="96">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>

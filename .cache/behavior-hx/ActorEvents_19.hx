@@ -61,36 +61,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_5_5_DoonKeyPress extends ActorScript
+class ActorEvents_19 extends ActorScript
 {
-	public var action:String;
-	public var key:String;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("Action to Perform", "action");
-		action = "";
-		nameMap.set("Key", "key");
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(isKeyPressed(key))
-				{
-					actor.shout("_customEvent_" + action);
-				}
-			}
-		});
 		
 	}
 	
