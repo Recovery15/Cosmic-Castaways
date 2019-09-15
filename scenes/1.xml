@@ -2,6 +2,7 @@
 <scene depth="1" desc="" eventsnippetid="21" extheight="544" extwidth="704" extx="-32" exty="-32" format="4.0.1" gravx="-0.0" gravy="0.0" height="480" id="1" name="test" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Space Background" opacity="100" order="1" rid="21" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
@@ -9,8 +10,7 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="1" name="Player Tank 1" order="0" sx="1.0" sy="1.0" x="298" y="395" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="4" id="27" name="Megaship 2" order="1" sx="4.1875" sy="2.0625" x="265" y="43" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="4" id="7" name="Alien Cruiser 3" order="2" sx="1.0" sy="1.0" x="256" y="192" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="4" id="27" name="Megaship 2" order="1" sx="5.2708335" sy="1.3958334" x="302" y="-7" z="0"/>
     </actors>
     <snippets/>
     <terrain/>
