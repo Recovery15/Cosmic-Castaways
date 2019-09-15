@@ -106,15 +106,7 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet actorid="19" attachedevent="true" class="scripts.ActorEvents_19" classname="scripts.ActorEvents_19" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="16" name="ActorEvents_19" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
-        <events/>
-    </snippet>
     <snippet actorid="11" attachedevent="true" class="scripts.ActorEvents_11" classname="scripts.ActorEvents_11" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="17" name="ActorEvents_11" oid="-1" package="scripts." shared="false" type="actor">
-        <blocks/>
-        <events/>
-    </snippet>
-    <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="18" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
         <events/>
     </snippet>
@@ -133,9 +125,9 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Win?" hidden="false" id="3" name="_Win" order="2"/>
         <blocks/>
         <events>
-            <event displayName="Actor Created" enabled="true" id="1" name="event-actor-create-kill" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="3" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="4" name="event-group-create-kill" order="2" repeats="true"/>
         </events>
     </snippet>
 </pack>
