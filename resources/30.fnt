@@ -1,10 +1,10 @@
 #
-#Sun Sep 15 00:34:18 EDT 2019
+#Mon Sep 16 00:10:57 EDT 2019
 style=bold
 alphabet=
-color=\#0000ff
+color=\#ffff00
 shadow.y=0
-family=Serif
+family=space age.ttf
 shadow.x=0
 shadow.color=\#000000
 gradient.offset=0

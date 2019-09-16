@@ -43,6 +43,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import com.stencyl.graphics.shaders.BasicShader;
 import com.stencyl.graphics.shaders.GrayscaleShader;
@@ -61,89 +62,61 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_9_9_2WayControl extends ActorScript
+class SceneEvents_1 extends SceneScript
 {
-	public var pressedLeft:Bool;
-	public var pressedRight:Bool;
-	public var controlLeft:String;
-	public var controlRight:String;
-	public var dir:Float;
-	public var topSpeed:Float;
-	public var decel:Float;
-	public function _customEvent_moveRight():Void
-	{
-		actor.setXVelocity(topSpeed);
-		dir = 4;
-		playSound(getSound(31));
-	}
-	public function _customEvent_checkInput():Void
-	{
-		pressedLeft = isKeyDown(controlLeft);
-		pressedRight = isKeyDown(controlRight);
-	}
-	public function _customEvent_moveLeft():Void
-	{
-		actor.setXVelocity(-(topSpeed));
-		dir = 3;
-		playSound(getSound(31));
-	}
+	public var _VictoryCounter:Actor;
+	public var _WinCounter:Float;
+	public var _Win:Bool;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("pressedLeft", "pressedLeft");
-		pressedLeft = false;
-		nameMap.set("pressedRight", "pressedRight");
-		pressedRight = false;
-		nameMap.set("Left Control", "controlLeft");
-		nameMap.set("Right Control", "controlRight");
-		nameMap.set("Initial Direction", "dir");
-		dir = 0.0;
-		nameMap.set("Top Speed", "topSpeed");
-		topSpeed = 18.0;
-		nameMap.set("Slowdown Rate", "decel");
-		decel = 0.0;
+		super();
+		nameMap.set("Victory Counter", "_VictoryCounter");
+		nameMap.set("Win Counter", "_WinCounter");
+		_WinCounter = 0.0;
+		nameMap.set("Win?", "_Win");
+		_Win = false;
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		loopSound(getSound(32));
+		
+		/* ======================= Member of Group ======================== */
+		addWhenTypeGroupKilledListener(getActorGroup(4), function(eventActor:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				_WinCounter += 1;
+			}
+		});
+		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				_customEvent_checkInput();
-				if((!(pressedLeft) && !(pressedRight)))
+				if((_WinCounter == 15))
 				{
-					actor.setXVelocity((actor.getXVelocity() * decel));
+					_Win = true;
 				}
-				if((pressedLeft && !(pressedRight)))
+			}
+		});
+		
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				g.setFont(getFont(30));
+				if((_Win == true))
 				{
-					_customEvent_moveLeft();
-					actor.setYVelocity(0);
-				}
-				else
-				{
-					if((pressedRight && !(pressedLeft)))
-					{
-						_customEvent_moveRight();
-						actor.setYVelocity(0);
-					}
-				}
-				if((actor.getXVelocity() > topSpeed))
-				{
-					actor.setXVelocity(topSpeed);
-				}
-				else
-				{
-					if((actor.getXVelocity() < -(topSpeed)))
-					{
-						actor.setXVelocity(-(topSpeed));
-					}
+					g.drawString("" + "Salvage Retrieved! You Win", 100, 100);
+					playSound(getSound(33));
 				}
 			}
 		});

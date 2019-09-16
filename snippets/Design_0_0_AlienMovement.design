@@ -145,6 +145,10 @@
                             <int id="2" val="0"/>
                             <int id="3" val="0.3"/>
                         </scene-reload-new>
+                        <play-sound4 comment="false" x="37" y="1182">
+                            <int id="0" val="0"/>
+                            <sound eid="34" id="1"/>
+                        </play-sound4>
                     </group>
                     <moreeq comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
@@ -163,13 +167,13 @@
         </step>
     </group>
     <group eventID="1" id="-1">
-        <eq comment="false" x="453" y="626">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </eq>
         <eq comment="false" x="701" y="532">
             <int id="0" val=""/>
             <int id="1" val="2"/>
+        </eq>
+        <eq comment="false" x="453" y="626">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
         </eq>
     </group>
 </groups>

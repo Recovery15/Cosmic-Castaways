@@ -11,7 +11,7 @@
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-21-2 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="1"/>
+                        <int id="1" val="15"/>
                     </eq>
                 </if>
             </group>
@@ -25,26 +25,49 @@
                     <font eid="30" id="0"/>
                 </set-font-new>
                 <if comment="false" x="26" y="67">
-                    <group eventID="3" id="-1"/>
-                    <get-val-21-3 comment="false" id="0" x="0" y="0"/>
+                    <group eventID="3" id="-1">
+                        <draw-text comment="false" x="37" y="97">
+                            <int id="0" val="Salvage Retrieved! You Win"/>
+                            <int id="1" val="100"/>
+                            <int id="2" val="100"/>
+                        </draw-text>
+                        <play-sound4 comment="false" x="37" y="117">
+                            <int id="0" val="0"/>
+                            <sound eid="33" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-val-21-3 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
                 </if>
             </group>
         </draw>
     </group>
-    <group eventID="3" id="1">
-        <draw-text comment="false" x="37" y="91">
-            <int id="0" val="Salvage Retrieved! You Win"/>
-            <int id="1" val="100"/>
-            <int id="2" val="100"/>
-        </draw-text>
-    </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
         <event-group-create-kill comment="false" x="15" y="15">
-            <group eventID="4" id="-1"/>
+            <group eventID="4" id="-1">
+                <incdec comment="false" x="26" y="47">
+                    <int id="0" val="2"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val="1"/>
+                </incdec>
+            </group>
             <int id="0" val="1"/>
             <actorgroup eid="4" id="1"/>
         </event-group-create-kill>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="6" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <play-sound4 comment="false" x="26" y="40">
+                    <int id="0" val="1"/>
+                    <sound eid="32" id="1"/>
+                </play-sound4>
+            </group>
+        </init>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

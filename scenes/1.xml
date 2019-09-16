@@ -11,6 +11,20 @@
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="1" name="Player Tank 1" order="0" sx="1.0" sy="1.0" x="298" y="395" z="0"/>
         <actor a="0.0" aid="2" c="false" group="4" id="27" name="Megaship 2" order="1" sx="5.2708335" sy="1.3958334" x="302" y="-7" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="4" id="7" name="Alien Cruiser 3" order="2" sx="0.5625" sy="0.6458333" x="241" y="121" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="4" id="7" name="Alien Cruiser 4" order="3" sx="0.5625" sy="0.6458333" x="175" y="120" z="0"/>
+        <actor a="0.0" aid="5" c="false" group="4" id="7" name="Alien Cruiser 5" order="4" sx="0.5625" sy="0.6458333" x="355" y="189" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="4" id="7" name="Alien Cruiser 6" order="5" sx="0.5625" sy="0.6458333" x="363" y="115" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="4" id="7" name="Alien Cruiser 7" order="6" sx="0.5625" sy="0.6458333" x="492" y="118" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="4" id="7" name="Alien Cruiser 8" order="7" sx="0.5625" sy="0.6458333" x="306" y="116" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="4" id="7" name="Alien Cruiser 9" order="8" sx="0.5625" sy="0.6458333" x="282" y="163" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="4" id="7" name="Alien Cruiser 10" order="9" sx="0.5625" sy="0.6458333" x="122" y="193" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="4" id="7" name="Alien Cruiser 11" order="10" sx="0.5625" sy="0.6458333" x="514" y="192" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="4" id="7" name="Alien Cruiser 12" order="11" sx="0.5625" sy="0.6458333" x="436" y="202" z="0"/>
+        <actor a="0.0" aid="13" c="false" group="4" id="7" name="Alien Cruiser 13" order="12" sx="0.5625" sy="0.6458333" x="203" y="203" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="4" id="7" name="Alien Cruiser 14" order="13" sx="0.5625" sy="0.6458333" x="101" y="117" z="0"/>
+        <actor a="0.0" aid="15" c="false" group="4" id="7" name="Alien Cruiser 15" order="14" sx="0.5625" sy="0.6458333" x="447" y="114" z="0"/>
+        <actor a="0.0" aid="16" c="false" group="4" id="7" name="Alien Cruiser 16" order="15" sx="0.5625" sy="0.6458333" x="40" y="188" z="0"/>
     </actors>
     <snippets/>
     <terrain/>

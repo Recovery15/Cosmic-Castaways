@@ -125,9 +125,10 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Win?" hidden="false" id="3" name="_Win" order="2"/>
         <blocks/>
         <events>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="4" repeats="true"/>
-            <event displayName="Actor Created" enabled="true" id="4" name="event-group-create-kill" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="7" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="8" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="4" name="event-group-create-kill" order="2" repeats="false"/>
+            <event displayName="Created" enabled="true" id="6" name="init" order="4" repeats="true"/>
         </events>
     </snippet>
 </pack>

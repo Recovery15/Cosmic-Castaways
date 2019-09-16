@@ -61,31 +61,28 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_9_9_2WayControl extends ActorScript
+class Design_2_2_ExplodeonDeath extends ActorScript
 {
-	public var pressedLeft:Bool;
-	public var pressedRight:Bool;
-	public var controlLeft:String;
-	public var controlRight:String;
-	public var dir:Float;
-	public var topSpeed:Float;
-	public var decel:Float;
-	public function _customEvent_moveRight():Void
+	public var _NumberofActorstoCreate:Float;
+	public var _ExplosionForce:Float;
+	public var _ActortoCreate:ActorType;
+	public var _NumberofSecondActorstoCreate:Float;
+	public var _SecondActortoCreate:ActorType;
+	public var _ExplosionForceofSecondActors:Float;
+	public var _SoundtoPlay:Sound;
+	public function _customEvent_HandleDeath():Void
 	{
-		actor.setXVelocity(topSpeed);
-		dir = 4;
-		playSound(getSound(31));
-	}
-	public function _customEvent_checkInput():Void
-	{
-		pressedLeft = isKeyDown(controlLeft);
-		pressedRight = isKeyDown(controlRight);
-	}
-	public function _customEvent_moveLeft():Void
-	{
-		actor.setXVelocity(-(topSpeed));
-		dir = 3;
-		playSound(getSound(31));
+		playSound(_SoundtoPlay);
+		for(index0 in 0...Std.int(_NumberofActorstoCreate))
+		{
+			createRecycledActor(getActorType(11), (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
+			getLastCreatedActor().applyImpulseInDirection(randomInt(1, 360), _ExplosionForce);
+		}
+		for(index0 in 0...Std.int(_NumberofSecondActorstoCreate))
+		{
+			createRecycledActor(getActorType(13), (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
+			getLastCreatedActor().applyImpulseInDirection(randomInt(1, 360), _ExplosionForceofSecondActors);
+		}
 	}
 	
 	
@@ -93,60 +90,25 @@ class Design_9_9_2WayControl extends ActorScript
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
-		nameMap.set("pressedLeft", "pressedLeft");
-		pressedLeft = false;
-		nameMap.set("pressedRight", "pressedRight");
-		pressedRight = false;
-		nameMap.set("Left Control", "controlLeft");
-		nameMap.set("Right Control", "controlRight");
-		nameMap.set("Initial Direction", "dir");
-		dir = 0.0;
-		nameMap.set("Top Speed", "topSpeed");
-		topSpeed = 18.0;
-		nameMap.set("Slowdown Rate", "decel");
-		decel = 0.0;
+		nameMap.set("Number of Actors to Create", "_NumberofActorstoCreate");
+		_NumberofActorstoCreate = 10.0;
+		nameMap.set("Explosion Force", "_ExplosionForce");
+		_ExplosionForce = 1.0;
+		nameMap.set("Actor to Create", "_ActortoCreate");
+		_ActortoCreate = getActorType(11);
+		nameMap.set("Number of Second Actors to Create", "_NumberofSecondActorstoCreate");
+		_NumberofSecondActorstoCreate = 5.0;
+		nameMap.set("Second Actor to Create", "_SecondActortoCreate");
+		_SecondActortoCreate = getActorType(13);
+		nameMap.set("Explosion Force of Second Actors", "_ExplosionForceofSecondActors");
+		_ExplosionForceofSecondActors = 0.7;
+		nameMap.set("Sound to Play", "_SoundtoPlay");
+		_SoundtoPlay = getSound(15);
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				_customEvent_checkInput();
-				if((!(pressedLeft) && !(pressedRight)))
-				{
-					actor.setXVelocity((actor.getXVelocity() * decel));
-				}
-				if((pressedLeft && !(pressedRight)))
-				{
-					_customEvent_moveLeft();
-					actor.setYVelocity(0);
-				}
-				else
-				{
-					if((pressedRight && !(pressedLeft)))
-					{
-						_customEvent_moveRight();
-						actor.setYVelocity(0);
-					}
-				}
-				if((actor.getXVelocity() > topSpeed))
-				{
-					actor.setXVelocity(topSpeed);
-				}
-				else
-				{
-					if((actor.getXVelocity() < -(topSpeed)))
-					{
-						actor.setXVelocity(-(topSpeed));
-					}
-				}
-			}
-		});
 		
 	}
 	
