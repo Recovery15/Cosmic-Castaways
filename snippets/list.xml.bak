@@ -81,6 +81,8 @@
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="checkInput" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
             <event displayName="moveLeft" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="5" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="6" name="event-key-press-release" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_10_10_PositionLimiter" classname="scripts.Design_10_10_PositionLimiter" desc="Prevents it from going through the walls since it's a kinematic actor." description="Prevents it from going through the walls since it's a kinematic actor." design="true" drawOrder="0" id="10" name="Position Limiter" oid="-1" package="" shared="false" type="actor">
@@ -123,12 +125,14 @@
         <actor default="" defaultValue="" desc="" dropdown="" fullname="Victory Counter" hidden="false" id="1" name="_VictoryCounter" order="0"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Win Counter" hidden="false" id="2" name="_WinCounter" order="1"/>
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Win?" hidden="false" id="3" name="_Win" order="2"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Isplaying" hidden="false" id="4" name="_Isplaying" order="3"/>
         <blocks/>
         <events>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="7" repeats="true"/>
-            <event displayName="Drawing" enabled="true" id="3" name="draw" order="8" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="8" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="9" repeats="true"/>
             <event displayName="Actor Created" enabled="true" id="4" name="event-group-create-kill" order="2" repeats="false"/>
-            <event displayName="Created" enabled="true" id="6" name="init" order="4" repeats="true"/>
+            <event displayName="Created" enabled="true" id="6" name="init" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="8" name="init" order="10" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="13" attachedevent="true" class="scripts.ActorEvents_13" classname="scripts.ActorEvents_13" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="22" name="ActorEvents_13" oid="-1" package="scripts." shared="false" type="actor">
@@ -149,6 +153,20 @@
         <blocks/>
         <events>
             <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="39" attachedevent="true" class="scripts.ActorEvents_39" classname="scripts.ActorEvents_39" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="26" name="ActorEvents_39" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_3" classname="scripts.SceneEvents_3" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="27" name="SceneEvents_3" oid="-1" package="scripts." sceneid="3" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+            <event displayName="Created" enabled="true" id="3" name="init" order="3" repeats="true"/>
         </events>
     </snippet>
 </pack>

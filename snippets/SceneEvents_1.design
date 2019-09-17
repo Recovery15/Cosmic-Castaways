@@ -5,44 +5,40 @@
             <group eventID="2" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="2" id="-1">
-                        <set-val-21-3 comment="false" x="37" y="70">
-                            <true comment="false" id="0" x="0" y="0"/>
-                        </set-val-21-3>
+                        <scene-change-through comment="false" x="37" y="70">
+                            <scene eid="3" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val=".01"/>
+                        </scene-change-through>
+                        <stop-sounds comment="false" x="37" y="97"/>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-21-2 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="23"/>
+                        <int id="1" val="22"/>
                     </eq>
                 </if>
             </group>
         </step>
     </group>
+    <group eventID="2" id="1">
+        <set-val-21-3 comment="false" x="244" y="199">
+            <true comment="false" id="0" x="0" y="0"/>
+        </set-val-21-3>
+    </group>
     <group eventID="2" id="-1"/>
     <group eventID="3" id="0">
         <draw comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <set-font-new comment="false" x="26" y="40">
-                    <font eid="30" id="0"/>
-                </set-font-new>
-                <if comment="false" x="26" y="67">
-                    <group eventID="3" id="-1">
-                        <draw-text comment="false" x="37" y="97">
-                            <int id="0" val="Salvage Retrieved! You Win"/>
-                            <int id="1" val="100"/>
-                            <int id="2" val="100"/>
-                        </draw-text>
-                        <play-sound4 comment="false" x="37" y="117">
-                            <int id="0" val="0"/>
-                            <sound eid="33" id="1"/>
-                        </play-sound4>
-                    </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-val-21-3 comment="false" id="0" x="0" y="0"/>
-                        <true comment="false" id="1" x="0" y="0"/>
-                    </eq>
-                </if>
-            </group>
+            <group eventID="3" id="-1"/>
         </draw>
+    </group>
+    <group eventID="3" id="2">
+        <if comment="false" x="226" y="201">
+            <group eventID="3" id="-1"/>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-val-21-3 comment="false" id="0" x="0" y="0"/>
+                <true comment="false" id="1" x="0" y="0"/>
+            </eq>
+        </if>
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
@@ -69,5 +65,36 @@
             </group>
         </init>
     </group>
+    <group eventID="6" id="1">
+        <if comment="false" x="314" y="217">
+            <group eventID="6" id="-1"/>
+            <int id="0" val=""/>
+        </if>
+    </group>
     <group eventID="6" id="-1"/>
+    <group eventID="8" id="0">
+        <init comment="false" x="205" y="89">
+            <group eventID="8" id="-1"/>
+        </init>
+    </group>
+    <group eventID="8" id="3">
+        <if comment="false" x="560" y="258">
+            <group eventID="8" id="-1">
+                <play-sound4 comment="false" x="571" y="288">
+                    <int id="0" val="1"/>
+                    <sound eid="33" id="1"/>
+                </play-sound4>
+            </group>
+            <eq comment="false" id="0" x="0" y="0">
+                <get-val-21-3 comment="false" id="0" x="0" y="0"/>
+                <true comment="false" id="1" x="0" y="0"/>
+            </eq>
+        </if>
+    </group>
+    <group eventID="8" id="-1">
+        <noteq comment="false" x="283" y="135">
+            <get-val-21-3 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val=""/>
+        </noteq>
+    </group>
 </groups>
